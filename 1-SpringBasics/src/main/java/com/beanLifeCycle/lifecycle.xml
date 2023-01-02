@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config></context:annotation-config>
+	
+	<!-- this is for xml type -->
+	<!-- <bean class="com.beanLifeCycle.ByXML" name="cycle" 
+	      init-method="start" destroy-method="end">
+	<property name="num" value="12"></property>
+	</bean> -->
+
+	<!-- this is for interface type  -->
+	<!-- <bean class="com.beanLifeCycle.ByInterface" name="inter">
+	<property name="name" value="rahul"></property>
+	</bean> -->
+
+	<!-- this is for annotation type -->
+	<bean class="com.beanLifeCycle.ByAnnotations" name="anno">
+	<property name="name" value="ghanendra"></property>
+	</bean>
+
+</beans>

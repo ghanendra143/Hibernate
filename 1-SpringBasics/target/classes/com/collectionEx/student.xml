@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="stud" class="com.collectionEx.Student">
+		<property name="stud_name" value="rahul"></property>
+		
+		<property name="subjects">
+			<list>
+				<value>vlsi</value>
+				<value>mems</value>
+				<value>dsd</value>
+			</list>
+		</property>
+
+		<property name="phones">
+			<set>
+				<value>33232</value>
+				<value>14938</value>
+				<value>21365</value>
+			</set>
+		</property>
+
+		<property name="courses">
+		<map>
+			<entry key="java" value="2-months"></entry>
+			<entry key="Unity-3d" value="4-months"></entry>
+			<entry key="DSA" value="6-months"></entry>
+		</map>
+		</property>
+	</bean>
+</beans>

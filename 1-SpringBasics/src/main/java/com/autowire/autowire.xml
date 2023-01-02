@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- responsible for byName type autowiring because of 
+		same name of bean as address object -->
+	<!-- <bean class="com.autowire.Address" name="address">
+	<property name="city" value="mainpuri"></property>
+	<property name="state" value="u.p"></property>
+	</bean> 
+	
+	<bean class="com.autowire.Employee" name="emp" autowire="byName">
+	<property name="name" value="rahul"></property>
+	</bean> -->
+	
+	<!-- here name is differ so autowire type is byType -->
+	<bean class="com.autowire.Address" name="address">
+	<property name="city" value="mainpuri"></property>
+	<property name="state" value="u.p"></property>
+	</bean>
+	
+	<bean class="com.autowire.Employee" name="emp" autowire="constructor">
+	<property name="name" value="rahul"></property>
+	</bean>
+
+</beans>
